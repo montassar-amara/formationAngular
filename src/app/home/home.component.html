@@ -1,0 +1,12 @@
+<div class="card">
+    <button class="btn btn-primary" (click)="printMsg()">
+        Click Me !
+    </button>
+    <ul>
+        <li *ngFor="let user of users|async">
+            <b>{{user.id}}</b> {{(user.name|duplicate:8)}}
+        </li>
+    </ul>
+    <!-- <button class="btn btn-info"></button> -->
+    <a routerLink="/detail">Detail page</a>
+</div>
