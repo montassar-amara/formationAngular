@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendService } from '../services/backend.service';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,8 @@ export class HomeComponent implements OnInit {
   users = this.userService.users;
   msg = "hello"
   myForm = this.fb.group({
-    myInput: new FormControl()
+    myInput: new FormControl('hello',Validators.minLength(3)),
+    myInput2: new FormControl('hello',Validators.minLength(3))
   });
   constructor(private userService:BackendService, private fb: FormBuilder) { }
 

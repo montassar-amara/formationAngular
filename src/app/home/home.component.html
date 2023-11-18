@@ -27,8 +27,9 @@
         <div class="d-flex justify-content-between" >
             
             <input type="text"  formControlName="myInput" placeholder="Message ici" >
+            <input type="text"  formControlName="myInput2" placeholder="Message ici" >
             
-            <button class="btn btn-primary" type="submit" (click)="submitForm()">
+            <button class="btn btn-primary" type="submit" (click)="submitForm()" [disabled]="!myForm.valid">
                 Click Me !
             </button>
         </div>
