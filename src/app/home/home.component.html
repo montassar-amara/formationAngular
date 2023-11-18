@@ -1,7 +1,39 @@
 <div class="card">
-    <button class="btn btn-primary" (click)="printMsg()">
-        Click Me !
-    </button>
+    <!-- <div class="d-flex justify-content-between" >
+
+        <input type="text" placeholder="Message ici" (input)="msg=$any($event.target).value">
+        
+        
+        
+        <span>msg: {{msg}}</span>
+
+        <button class="btn btn-primary" (click)="printMsg(msg)">
+            Click Me !
+        </button>
+    </div> -->
+
+    <!-- <div class="d-flex justify-content-between" >
+        
+        <input type="text" placeholder="Message ici" [ngModel]="msg" (ngModelChange)="msg=$event">
+        
+        <span>msg: {{msg}}</span>
+
+        <button class="btn btn-primary" (click)="msg='hey you'">
+            Click Me !
+        </button>
+    </div> -->
+
+    <form  [formGroup]="myForm">
+        <div class="d-flex justify-content-between" >
+            
+            <input type="text"  formControlName="myInput" placeholder="Message ici" >
+            
+            <button class="btn btn-primary" type="submit" (click)="submitForm()">
+                Click Me !
+            </button>
+        </div>
+    </form>
+
     <ul>
         <li *ngFor="let user of users|async">
             <b>{{user.id}}</b> {{(user.name|duplicate:8)}}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendService } from '../services/backend.service';
-import { take } from 'rxjs';
+import { FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -9,19 +9,26 @@ import { take } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
   users = this.userService.users;
-
-  constructor(private userService:BackendService) { }
+  msg = "hello"
+  myForm = this.fb.group({
+    myInput: new FormControl()
+  });
+  constructor(private userService:BackendService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.printMsg()
+    // this.printMsg()
   }
 
-  printMsg(){
-    this.userService.fetchData().subscribe()
+  printMsg(ev:any){
+    console.log(ev)
   }
 
   toUppercase(text:string):string{
     console.log('appel')
     return text.toUpperCase()
+  }
+
+  submitForm(){
+    console.log(this.myForm.value)
   }
 }
