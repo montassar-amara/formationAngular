@@ -9,13 +9,17 @@ import { DuplicatePipe } from './pipes/duplicate.pipe';
 import { DetailComponent } from './detail/detail.component'
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EnfantComponent } from './enfant/enfant.component';
+import { Enfant2Component } from './enfant2/enfant2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DuplicatePipe,
-    DetailComponent
+    DetailComponent,
+    EnfantComponent,
+    Enfant2Component
   ],
   imports: [
     BrowserModule,

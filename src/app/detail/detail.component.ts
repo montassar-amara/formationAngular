@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-
+  data = "Hello from parent"
+  fromChild:any = 0
   constructor() { }
 
   ngOnInit(): void {

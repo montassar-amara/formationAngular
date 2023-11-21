@@ -2,3 +2,11 @@
 
 
 <a routerLink="/home">Home page</a>
+
+<div class="d-flex justify-content-between mx-4">
+    <app-enfant [inputData]="data" (eventChild)="fromChild=$event"></app-enfant>
+    <!-- <app-enfant [inputData]="fromChild" (eventChild)="data=$event"></app-enfant> -->
+    <app-enfant2></app-enfant2>
+</div>
+
+
