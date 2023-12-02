@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class DetailComponent implements OnInit {
   data = "Hello from parent"
   fromChild:any = 0
+  fromChild1 = ""
+  fromChild2 = ""
   constructor() { }
 
   ngOnInit(): void {

@@ -6,6 +6,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DataService {
   data = ""
+  dataFromChild1 = ""
+  dataFromChild2 = ""
   data$ = new BehaviorSubject<string>('')
   constructor() { }
 }

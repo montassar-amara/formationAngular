@@ -3,10 +3,30 @@
 
 <a routerLink="/home">Home page</a>
 
-<div class="d-flex justify-content-between mx-4">
+<!-- <div class="d-flex justify-content-between mx-4">
     <app-enfant [inputData]="data" (eventChild)="fromChild=$event"></app-enfant>
-    <!-- <app-enfant [inputData]="fromChild" (eventChild)="data=$event"></app-enfant> -->
+    <app-enfant [inputData]="fromChild" (eventChild)="data=$event"></app-enfant>
     <app-enfant2></app-enfant2>
-</div>
+</div> -->
 
+<!-- Methode 1 -->
+<!-- 
+child 1
+<app-input-output [dataFromChild]="fromChild2" (dataOut)="fromChild1=$event"></app-input-output>
+
+
+
+child 2
+<app-input-output [dataFromChild]="fromChild1" (dataOut)="fromChild2=$event"></app-input-output>
+ -->
+
+ <!-- Methode 2 -->
+<br>
+child 1
+<app-input-output ></app-input-output>
+
+
+
+child 2
+<app-input-output2 ></app-input-output2>
 

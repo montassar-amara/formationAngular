@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EnfantComponent } from './enfant/enfant.component';
 import { Enfant2Component } from './enfant2/enfant2.component';
+import { InputOutputComponent } from './exercice/input-output/input-output.component';
+import { InputOutput2Component } from './exercice/input-output2/input-output2.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { Enfant2Component } from './enfant2/enfant2.component';
     DuplicatePipe,
     DetailComponent,
     EnfantComponent,
-    Enfant2Component
+    Enfant2Component,
+    InputOutputComponent,
+    InputOutput2Component
   ],
   imports: [
     BrowserModule,

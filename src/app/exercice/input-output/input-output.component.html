@@ -1,0 +1,27 @@
+<!-- Methode 1 Parent intermediare-->
+
+<!-- <div class="card w-100">
+    <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-start">
+            <input type="text" [(ngModel)]="data">
+            <button (click)="sendData()">Send data</button>
+        </div>
+        <span>
+            Data received from child 2:{{dataFromChild}}
+        </span>
+    </div>
+</div> -->
+
+<!-- Methode 2 Service intermediare-->
+
+<div class="card w-100">
+    <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-start">
+            <input type="text" [(ngModel)]="data">
+            <button (click)="sendDataToService()">Send data</button>
+        </div>
+        <span>
+            Data received from child 2:{{service.dataFromChild2}}
+        </span>
+    </div>
+</div>
